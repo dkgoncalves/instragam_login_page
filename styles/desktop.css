@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  align-items: center;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+footer {
+  bottom: 100px;
+  color: rgba(142, 142, 142, 1);
+  position: absolute;
+}
+
+.banner {
+  background-image: url('../images/phones.png');
+  background-size: 454px 618px;
+  background-position: 0 0;
+  height: 618px;
+  position: relative;
+  width: 450px;
+}
+
+.banner_photo.active {
+  position: absolute;
+  right: 59.5px;
+  top: 100px;
+}
+
+.banner_photo.inactive {
+  display: none;
+}
+
+.instragramWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.instaLogin {
+  align-items: center;
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  justify-content: space-around;
+  width: 350px;
+}
+
+.instaLogin__button {
+  background: #0095f6;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.instaLogin__changeAccount a, span {
+  font-size: 14px;
+}
+
+.instaLogin__changeAccount a {
+  color: rgba(0, 149, 246, 1);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.instaLogin img {
+  max-width: 60%;
+}
+
+.instaLogin__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+
+/* mobile */
+@media only screen and (max-width: 650px) {
+  .banner {
+    display: none !important;
+  }
+}
