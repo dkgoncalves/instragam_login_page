@@ -1,3 +1,3 @@
 ### Creating Instagram login page
 
-![]('images/instagram.gif')
+![](images/instagram.gif)
