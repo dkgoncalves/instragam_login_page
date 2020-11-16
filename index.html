@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/desktop.css">
+    <title>Instagram Clone</title>
+  </head>
+  <body>
+    <div class="instragramWrapper">
+      <div class="banner">
+        <img src="images/phone1.jpg" class="banner_photo active" alt="image1">
+        <img src="images/phone2.jpg" class="banner_photo inactive" alt="image2">
+        <img src="images/phone3.jpg" class="banner_photo inactive" alt="image3">
+        <img src="images/phone4.jpg" class="banner_photo inactive" alt="image4">
+        <img src="images/phone5.jpg" class="banner_photo inactive" alt="image5">
+      </div>
+      <div class="instaLogin">
+        <img src="images/instagramlogo.png" class="instaLogin__logo" alt="Logo do Instagram">
+        <img src="images/avatar.jpeg" class="instaLogin__avatar" alt="derik.mg">
+        <button type="button" name="button" class="instaLogin__button">
+          Continuar como derik.mg
+        </button>
+        <div class="instaLogin__changeAccount">
+          <span>
+            Não é derik.mg?
+            <a href="#">
+              Trocar de conta
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <span>
+        © 2020 Instagram do Facebook
+      </span>
+    </footer>
+
+    <script type="text/javascript">
+      mapImages();
+
+      async function mapImages() {
+        let images = document.querySelectorAll('.banner img');
+
+        while (true) {
+          for (const image of images) {
+            setImageToActive(image);
+            await sleep();
+            setImageToInactive(image)
+          }
+        }
+      };
+
+      function setImageToActive(image) {
+        image.classList.remove('inactive');
+        image.classList.add('active');
+      }
+
+      function setImageToInactive(image) {
+        image.classList.remove('active');
+        image.classList.add('inactive');
+      }
+
+      function sleep() {
+        return new Promise(resolve => setTimeout(resolve, 3000));
+      }
+    </script>
+  </body>
+</html>
